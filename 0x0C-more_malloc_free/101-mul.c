@@ -3,39 +3,37 @@
 #include "main.h"
 
 /**
- * is_digit - checks if a string contains a non-digit char
+ * is_digit - checks if a string contains a non-digit character
  * @s: string to be evaluated
- *
  * Return: 0 if a non-digit is found, 1 otherwise
  */
 int is_digit(char *s)
 {
-	int i = 0;
+	int n = 0;
 
-	while (s[i])
+	while (s[n])
 	{
-		if (s[i] < '0' || s[i] > '9')
+		if (s[n] < '0' || s[n] > '9')
 			return (0);
-		i++;
+		n++;
 	}
 	return (1);
 }
 
 /**
- * _strlen - returns the length of a string
- * @s: string to evaluate
- *
- * Return: the length of the string
+ * _strlen - return length of a string
+ * @s:the string
+ * Return: length of the string
  */
 int _strlen(char *s)
 {
-	int i = 0;
+	int n = 0;
 
-	while (s[i] != '\0')
+	while (s[] != '\0')
 	{
-		i++;
+		n++;
 	}
-	return (i);
+	return (n);
 }
 
 /**
@@ -48,10 +46,9 @@ void errors(void)
 }
 
 /**
- * main - multiplies two positive numbers
+ * main - multiplies 2positive numbers
  * @argc: number of arguments
- * @argv: array of arguments
- *
+ * @argv: array of arg
  * Return: always 0 (Success)
  */
 int main(int argc, char *argv[])
