@@ -45,8 +45,8 @@ char *create_buffer(char *file)
 
 /**
  * main - Copies the contents of a file to another file.
- * @argc: The num of arguments supplied to the program.
- * @argv: An array of ptrs to the arguments.
+ * @argc: The number of arguments supplied to the program.
+ * @argv: An array of pointers to the arguments.
  *
  * Return: 0 on success.
  *
@@ -57,7 +57,7 @@ char *create_buffer(char *file)
  */
 int main(int argc, char *argv[])
 {
-	int from, to, r, wr;
+	int from, to, r, w;
 	char *buffer;
 
 	if (argc != 3)
@@ -80,7 +80,7 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 
-		wr = write(to, buffer, r);
+		w = write(to, buffer, r);
 		if (to == -1 || w == -1)
 		{
 			dprintf(STDERR_FILENO,
