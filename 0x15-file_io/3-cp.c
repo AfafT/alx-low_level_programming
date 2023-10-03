@@ -31,16 +31,17 @@ char *create_buffer(char *file)
  */
 void close_file(int fd)
 {
-        int c;
+	int c;
 
-        c = close(fd);
+	c = close(fd);
 
-        if (c == -1)
-        {
-                dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
-                exit(100);
-        }
+	if (c == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		exit(100);
+	}
 }
+
 
 /**
  * main - Copies the contents of a file to another file.
@@ -78,7 +79,6 @@ int main(int argc, char *argv[])
 			free(buffer);
 			exit(98);
 		}
-
 		wr = write(to, buffer, r);
 		if (to == -1 || wr == -1)
 		{
@@ -87,7 +87,6 @@ int main(int argc, char *argv[])
 			free(buffer);
 			exit(99);
 		}
-
 		r = read(from, buffer, 1024);
 		to = open(argv[2], O_WRONLY | O_APPEND);
 
