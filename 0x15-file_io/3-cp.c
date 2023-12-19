@@ -45,7 +45,7 @@ void close_file(int fd)
 }
 
 /**
- * main - Copy the contents of a file to another file.
+ * main - Copies the contents of a file to another file.
  * @argc: The num of arguments supplied to the program.
  * @argv: An array of pointers to the arguments.
  *
